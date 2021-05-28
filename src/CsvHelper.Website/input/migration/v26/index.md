@@ -110,6 +110,81 @@ var args = new PrepareHeaderForMatchArgs
 var args = new PrepareHeaderForMatchArgs(header, fieldIndex);
 ```
 
+**ReadingExceptionOccurredArgs**
+```cs
+// v26
+var args = new ReadingExceptionOccurredArgs
+{
+	Exception = exception,
+};
+
+// v27
+var args = new ReadingExceptionOccurredArgs(exception);
+```
+
+**ReferenceHeaderPrefixArgs**
+```cs
+// v26
+var args = new ReferenceHeaderPrefixArgs
+{
+	MemberType = memberType,
+	MemberName = memberName,
+};
+
+// v27
+var args = new ReferenceHeaderPrefixArgs(memberType, memberName);
+```
+
+**ShouldQuoteArgs**
+```cs
+// v26
+var args = new ShouldQuoteArgs
+{
+	Field = field,
+	FieldType = fieldType,
+	Row = row,
+};
+
+// v27
+var args = new ShouldQuoteArgs(field, fieldType, row);
+```
+
+**ShouldSkipRecordArgs**
+```cs
+// v26
+var args = new ShouldSkipRecordArgs
+{
+	Record = record,
+};
+
+// v27
+var args = new ShouldSkipRecordArgs(record);
+```
+
+**ShouldUseConstructorParametersArgs**
+```cs
+// v26
+var args = new ShouldUseConstructorParametersArgs
+{
+	ParameterType = parameterType,
+};
+
+// v27
+var args = new ShouldUseConstructorParametersArgs(parameterType);
+```
+
+**ValidateArgs**
+```cs
+// v26
+var args = new ValidateArgs
+{
+	Field = field,
+};
+
+// v27
+var args = new ValidateArgs(field);
+```
+
 ## IParserConfiguration
 
 - Added property `bool ExceptionMessagesContainRawData { get; }`.
